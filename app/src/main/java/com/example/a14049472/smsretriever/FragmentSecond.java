@@ -27,6 +27,7 @@ public class FragmentSecond extends Fragment {
     Button btnRetrieveFrag2;
     EditText editText2;
     TextView tvFrag2;
+    TextView tv2;
 
 
     public FragmentSecond() {
@@ -42,6 +43,7 @@ public class FragmentSecond extends Fragment {
         tvFrag2 = (TextView) view.findViewById(R.id.tvFrag2);
         editText2 = (EditText) view.findViewById(R.id.editText2);
         btnRetrieveFrag2 = (Button) view.findViewById(R.id.btnRetrieveFrag2);
+        tv2=(TextView)view.findViewById(R.id.tv2);
         btnRetrieveFrag2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -91,7 +93,7 @@ public class FragmentSecond extends Fragment {
                                 + "\n\"" + body + "\"\n\n";
                     } while (cursor.moveToNext());
                 }
-                tvFrag2.setText(smsBody);
+                tv2.setText(smsBody);
 
 
             }
